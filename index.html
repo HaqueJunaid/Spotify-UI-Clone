@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify - Web Player Music</title>
+    <link rel="icon" href="./Assets/logo.png" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="side-bar">
+            <nav>
+                <div class="nav-links">
+                    <div class="nav-option">
+                        <i class="fa-solid fa-house"></i>
+                        <a href="">Home</a>
+                    </div>
+                    <div class="nav-option hover">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <a href="">Search</a>
+                    </div>
+                </div>
+                <div class="library">
+                    <div class="library-head">
+                        <div class="library-left hover">
+                            <img src="./Assets/library_icon.png">
+                            <a href="">Your Library</a>
+                        </div>
+                        <div class="library-right">
+                            <i class="fa-solid fa-plus hover"></i>
+                            <i class="fa-solid fa-arrow-right hover"></i>
+                        </div>
+                    </div>
+                    <div class="library-boxes">
+                        <div class="library-box">
+                            <h6>Create your first playlist</h6>
+                            <p>It's easy, we'll help you</p>
+                            <a href="#" class="btn">Create playlist</a>
+                        </div>
+                        <div class="library-box">
+                            <h6>Let's find some podcasts to follow</h6>
+                            <p>We'll keep you update on new episodes</p>
+                            <a href="#" class="btn">Browse podcasts</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Main -->
+        <div class="main-area">
+            <!-- Top Navbar -->
+            <div class="tool-bar">
+                <div class="paginationBtns">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    <i class="fa-solid fa-chevron-right"></i>
+                </div>
+                <div class="utilityBtns">
+                    <a href="" class="btn">Explore Premium</a>
+                    <a href="" class="btn dark wText">
+                        <i class="fa-solid fa-arrow-down"></i> Install App
+                    </a>
+                    <a href="" class="btn dark"><i class="fa-regular fa-user"></i></a>
+                </div>
+            </div>
+
+            <!-- Cards -->
+            <div class="ctn">
+                <div class="card-containers">
+                    <div class="upper">
+                        <h1>Recently Played</h1>
+                    </div>
+                    <div class="lower">
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card1img.jpeg" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Top 50 - Global</h1>
+                                <p>Your daily updates of the most played tracks</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-containers">
+                    <div class="upper">
+                        <h1>Trending now near you</h1>
+                        <h6>Show all</h6>
+                    </div>
+                    <div class="lower">
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card2img.jpeg" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Indie India</h1>
+                                <p>Best of the Indian Indie</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card3img.jpeg" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Rahat Sir's</h1>
+                                <p>Best of the Rahat Fateh Ali Khan</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card4img.jfif" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Always Alen Walker</h1>
+                                <p>Enjoy the latest tracks</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card5img.jpeg" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Top Hits</h1>
+                                <p>Listen the top global trendings</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card6img.jpeg" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Trending India</h1>
+                                <p>Listen the current trending in India</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-containers">
+                    <div class="upper">
+                        <h1>Recently Played</h1>
+                        <h6>Show all</h6>
+                    </div>
+                    <div class="lower">
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card7img.jfif" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Sunoh</h1>
+                                <p>Campus Diaries by VS42</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card8img.jfif" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>The Dogs</h1>
+                                <p>AOT - Attack on titan (final season final part)</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card9img.jfif" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Under the tree</h1>
+                                <p>AOT - Attack on titan (Season 4 by SIM)</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card10img.jfif" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Labon Ko</h1>
+                                <p>Bhool Bhulaiya by "Pritam" and "K.K"</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="thumbnail">
+                                <img src="./Assets/card11img.jfif" alt="">
+                            </div>
+                            <div class="content">
+                                <h1>Grand Escape</h1>
+                                <p>Weathering with you (feat. Toko Miura)</p>
+                            </div>
+                            <div class="play" style="position: absolute;">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Player -->
+        <div class="player">
+            <div class="about-music">
+                <div class="thumb">
+                    <img src="./Assets/card4img.jfif" alt="">
+                </div>
+                <div class="text-about">
+                    <h1>On My Way</h1>
+                    <p>Alen Walker</p>
+                </div>
+                <i class="fa-regular fa-square-plus"></i>
+            </div>
+            <div class="controller">
+                <div class="options">
+                    <i class="fa-solid fa-shuffle"></i>
+                    <i class="fa-solid fa-backward-step"></i>
+                    <i class="fa-solid fa-circle-play"></i>
+                    <i class="fa-solid fa-forward-step"></i>
+                    <i class="fa-solid fa-repeat"></i>
+                </div>
+                <div class="bar">
+                    <span class="curr leng">
+                        0:00
+                    </span>
+                    <div class="slider-container">
+                        <input type="range" id="slider" min="0" max="100" value="0">
+                    </div>
+                    <span class="rem leng">
+                        3:45
+                    </span>
+                </div>
+            </div>
+            <div class="otherOptions">
+                <i class="fa-solid fa-headphones hover"></i>
+                <i class="fa-solid fa-microphone hover"></i>
+                <i class="fa-solid fa-list-ul hover"></i>
+                <div class="volume hover">
+                    <i class="fa-solid fa-volume-high"></i>
+                    <div class="slider-container">
+                        <input type="range" id="slider" min="0" max="100" value="20">
+                    </div>
+                </div>
+                <i class="fa-solid fa-up-right-and-down-left-from-center hover"></i>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,652 @@
+/* Adding custom fonts */
+@font-face {
+    font-family: black;
+    src: url("./Font/Black.woff");
+}
+
+@font-face {
+    font-family: bold;
+    src: url("./Font/Bold.woff");
+}
+
+@font-face {
+    font-family: medium;
+    src: url("./Font/Medium.woff");
+}
+
+@font-face {
+    font-family: light;
+    src: url("./Font/Light.woff");
+}
+
+@font-face {
+    font-family: book;
+    src: url("./Font/Book.woff");
+}
+
+/* ------------------- */
+
+/* Some Variables */
+:root {
+    --background-color: #000;
+    --font-color: #fff;
+    --background-color2: #121212;
+    --container-color: #1F1F1F;
+}
+
+/* -------------- */
+
+/* Custom Scroller */
+.main-area::-webkit-scrollbar {
+    appearance: none;
+    width: 10px;
+}
+
+.main-area::-webkit-scrollbar-thumb {
+    background-color: #292929;
+    border-radius: 3rem;
+}
+
+.main-area::-webkit-scrollbar-thumb:hover {
+    background-color: #353535;
+    border-radius: 3rem;
+}
+/* --------------- */
+
+
+/* Main Css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: book;
+} 
+
+i {
+    cursor: pointer;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--background-color);
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    padding: 0.7rem 0.6rem;
+    overflow: hidden;
+    color: var(--font-color);
+    display: flex;
+    gap: 0.7rem;
+}
+
+.side-bar {
+    width: 20%;
+}
+
+nav {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-color2);
+    width: 100%;
+    padding: 1.2rem 1.4rem;
+    gap: 1.5rem;
+    border-radius: 1rem;
+}
+
+.nav-links .nav-option {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    cursor: pointer;
+}
+
+.nav-option i {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+
+.nav-option a {
+    text-decoration: none;
+    color: #fff;
+    margin-top: 3px;
+}
+
+.hover {
+    opacity: 0.7;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.hover:hover {
+    opacity: 1;
+}
+
+.library {
+    border-radius: 1rem;
+    background-color: var(--background-color2);
+    padding: 1.2rem 1.4rem;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+}
+
+.library .library-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.library-head .library-left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.library-left img {
+    width: 1.7rem;
+}
+
+.library-left a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.library-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.library-boxes {
+    position: relative;
+    margin-top: 1.5rem;
+    height: 100%;
+}
+
+.library-boxes .library-box {
+    padding: 1.5rem 1.2rem;
+    border-radius: .5rem;
+    background-color: var(--container-color);
+    margin-top: 1rem;
+}
+
+.library-box h6 {
+    font-size: 1rem;
+    font-family: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: 0.5px;
+}
+
+.library-box p {
+    font-family: light;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin-bottom: 1.1rem;
+}
+
+.btn {
+    font-family: bold;
+    color: var(--container-color);
+    background-color: var(--font-color);
+    font-size: 0.9rem;
+    letter-spacing: 0.2px;
+    text-decoration: none;
+    border-radius: 3rem;
+    padding: 0.5rem 0.8rem;
+    position: relative;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.main-area {
+    background: linear-gradient(0deg, var(--background-color2) 20%, var(--background-color2) 100%);
+    flex: 1;
+    overflow: hidden;
+    padding: 0 1.4rem;
+    border-radius: 1rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.tool-bar {
+    width: 100%;
+    display: flex;
+    padding: 1.2rem 1.4rem;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    background-color: var(--background-color2);
+}
+
+.paginationBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.paginationBtns i {
+    background-color: var(--background-color2);
+    width: 2.2rem;
+    height: 2.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1rem;
+    opacity: 0.7;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.paginationBtns i:hover {
+    opacity: 1;
+}
+
+.utilityBtns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn.dark {
+    color: #fff;
+    background-color: var(--background-color);
+}
+
+.btn.wText > i {
+    font-size: 0.8rem;
+    margin-right: 0.5rem;
+}
+
+.main-area .ctn {
+    width: 100%;
+    position: relative;
+    padding: 1rem 0;
+    padding-bottom: 4rem;
+}
+
+.card-containers {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    margin-bottom: 2.5rem;
+}
+
+.upper {
+    margin-bottom: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.upper h1 {
+    font-family: medium;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    line-height: 1;
+    cursor: default;
+}
+
+.upper h1:hover {
+    text-decoration: underline;
+}
+
+.upper h6 {
+    font-size: 1rem;
+    font-weight: 100;
+    cursor: pointer;
+    margin-right: .5rem;
+    transition: 0.2s ease;
+}
+
+.upper h6:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+.lower {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    margin-left: 1.5rem;
+    column-gap: 1.5rem;
+}
+
+.lower .card {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--container-color);
+    padding: 1.2rem;
+    border-radius: 0.8rem;
+    gap: 1.2rem;
+    position: relative;
+    overflow: hidden;
+    transition: 0.2s ease;
+}
+
+.card:hover {
+    background-color: #292929;
+}
+
+.card .play {
+    width: 3rem;
+    height: 3rem;
+    right: 1.1rem;
+    bottom: -20%;
+    border-radius: 50%;
+    background-color: #1ED55F;
+    transition: 0.1s ease;
+    opacity: 0;
+}
+
+.card:hover .play {
+    bottom: 1rem;
+    opacity: 1;
+}
+
+.play i {
+    font-size: 1.2rem;
+    left: 53%;
+    top: 52%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: var(--background-color);
+}
+
+.card .thumbnail {
+    width: 100%;
+    height: 14rem;
+    border-radius: 0.4rem;
+    overflow: hidden;
+}
+
+.card .thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .content {
+    display: flex;
+    flex-direction: column;
+}
+
+.content h1 {
+    line-height: 1;
+    font-family: bold;
+    font-size: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.content p {
+    line-height: 1.3;
+    font-size: 0.9rem;
+    font-family: light;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+}
+
+.player {
+    background-color: var(--background-color);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    padding: 1rem 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-music {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.about-music .thumb {
+    width: 4rem;
+    height: 4rem;
+    overflow: hidden;
+    border-radius: 0.3rem;
+    cursor: pointer;
+}
+
+.thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.text-about h1 {
+    font-size: 1.3rem;
+    font-family: bold;
+    letter-spacing: 0.2px;
+    transition: 0.2s esae;
+    cursor: pointer;
+}
+
+.text-about p {
+    font-size: 1rem;
+    font-family: light;
+    opacity: 0.8;
+    letter-spacing: 0.2px;
+    font-weight: 100;
+    transition: 0.2s esae;
+    cursor: pointer;
+}
+
+.text-about p:hover{
+    opacity: 1;
+    text-decoration: underline;
+    transition: 0.2s esae;
+}
+
+.text-about h1:hover{
+    text-decoration: underline;
+}
+
+.about-music i {
+    font-size: 1.2rem;
+    font-weight: 100;
+    opacity: 0.8;
+    transition: 0.2s esae;
+    cursor: pointer;
+}
+
+.about-music i:hover {
+    opacity: 1;
+}
+
+.controller {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.controller .options {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.options i {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.options i.fa-circle-play {
+    font-size: 1.8rem;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+}
+
+.bar span {
+    font-size: 0.8rem;
+    font-family: light;
+    font-weight: 100;
+    letter-spacing: 0.2px;
+    margin-top: 3px;
+}
+
+.slider-container {
+    width: 30rem;
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Override default appearance */
+    appearance: none; /* Remove default styling */
+    width: 100%;
+    height: 5px; /* Track height */
+    background: #333; /* Track background color */
+    border-radius: 5px; /* Rounded corners for track */
+    outline: none; /* Remove default outline */
+    cursor: pointer;
+}
+
+/* Slider Thumb */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default appearance */
+    appearance: none; /* Remove default styling */
+    width: 15px; /* Thumb width */
+    height: 15px; /* Thumb height */
+    background: #1db954; /* Thumb color */
+    border-radius: 50%; /* Round thumb */
+    cursor: pointer; /* Pointer cursor */
+    position: relative;
+    z-index: 1;
+    margin-top: -3px;
+}
+
+/* Slider Thumb for Firefox */
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Slider Thumb for IE */
+input[type="range"]::-ms-thumb {
+    width: 10px;
+    height: 10px;
+    background: #1db954;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Slider Track */
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 30rem;
+    height: 8px;
+    background: #353535;
+    border-radius: 5px;
+}
+
+/* Slider Track for Firefox */
+input[type="range"]::-moz-range-track {
+    width: 30rem;
+    height: 8px;
+    background: #353535;
+    border-radius: 5px;
+}
+
+/* Slider Track for IE */
+input[type="range"]::-ms-track {
+    width: 30rem;
+    height: 8px;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+    border-radius: 5px;
+}
+
+/* Additional styling for the track fill (optional) */
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #1db954 0%, #1db954 var(--value), #333 var(--value), #333 100%);
+}
+
+input[type="range"] {
+    --value: 50%; /* Initial value of the slider */
+}
+
+/* JavaScript to Update Track Fill */
+input[type="range"] {
+    --value: calc(100% * var(--value));
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    background: linear-gradient(to right, #1db954 0%, #1db954 var(--value), #333 var(--value), #333 100%);
+}
+
+input[type="range"]::-moz-range-track {
+    background: linear-gradient(to right, #1db954 0%, #1db954 var(--value), #333 var(--value), #333 100%);
+}
+
+.otherOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.otherOptions > i {
+    opacity: 0.8;
+    transition: 0.2s ease;
+    font-size: 1rem;
+}
+
+.volume {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.volume > i {
+    font-size: 1rem;
+}
+
+.volume .slider-container {
+    width: 150px;
+}
